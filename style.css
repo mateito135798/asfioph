@@ -1,0 +1,62 @@
+@keyframes color-change{
+    0% {color: blue;}
+    14%{color: red;}
+    28%{color: rgb(4, 255, 0);}
+    42%{color: rgb(0, 255, 145);}
+    56%{color: rgb(255, 255, 0);}
+    70%{color: rgb(156, 136, 159);}
+    84%{color: rgb(145, 255, 149);}
+
+
+}
+
+/* Define la animación llamada 'desvanecer-aparecer' */
+@keyframes desvanecer-aparecer {
+  0% {
+    opacity: 0; /* Comienza invisible */
+  }
+  50% {
+    opacity: 1; /* Termina completamente visible */
+  }
+  100% {
+    opacity: 0; /* termina invisible */
+  }
+}
+
+/* Aplica la animación al texto */
+.texto-animado {
+  animation-name: desvanecer-aparecer;
+  animation-duration: 2s; /* Duración de la animación */
+  animation-timing-function: ease-in-out; /* Curva de tiempo */
+  animation-fill-mode: forwards; /* Mantiene el estado final */
+}
+
+ 
+body{
+    font-size:16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 12, 88);
+    color: rgb(170, 166, 192);
+
+}
+
+img{
+    border-radius: 50%;
+    animation: desvanecer-aparecer 3s infinite;
+}
+
+h1{
+    text-align: center;
+    color:red;
+    animation:  color-change 5s infinite;
+}
+h3{
+    text-align: center;
+    color:red;
+}
+
+div.centered{
+    text-align: center;
+}
+
+/*https://prismic-io.translate.goog/blog/css-text-animations?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc&_x_tr_hist=true*/
